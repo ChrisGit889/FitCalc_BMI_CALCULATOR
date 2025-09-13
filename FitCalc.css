@@ -1,41 +1,6 @@
 /* Css Christhio Hermawan 535240050 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-.hero {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  background: url('gambar/OrangGYM.jpg') center/cover no-repeat;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.hero-content p {
-  font-size: 20px;
-  color: #e5e7eb;
-}
-
 :root {
   --bg: #f7fafc;
   --card: #ffffff;
@@ -44,21 +9,21 @@
   --muted: #6b7280;
 }
 
-input[type=number] {
-  color: var(--text);
-}
-
 :root.dark {
   --bg: #111827;
   --card: #1f2937;
   --text: #f9fafb;
   --primary: #3fb37f;
-  border: 1px solid #374151;
   --muted: #9ca3af;
+  border: 1px solid #374151;
 }
 
-/* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
@@ -66,7 +31,10 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
+input[type=number] {
+  color: var(--text);
+}
+
 .nav-wrap {
   position: sticky;
   top: 0;
@@ -126,30 +94,37 @@ body {
   max-width: 1100px;
   margin: auto;
 }
-
 .hero {
+  position: relative;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: url('gambar/OrangGYM.jpg') center/cover no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
 }
 .hero-content h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
 }
 .hero-content p {
-  color: var(--muted);
-  font-size: 18px;
-}
-.hero-image img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-size: 20px;
+  color: #e5e7eb;
 }
 
-/* Card (Kalkulator) */
 .card {
   background: var(--card);
   border-radius: 16px;
@@ -173,6 +148,14 @@ body {
   border: 1px solid #d1d5db;
   background: transparent;
 }
+.calc-right {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 20px;
+}
+
 .actions {
   display: flex;
   gap: 10px;
@@ -202,7 +185,6 @@ body {
   background: rgba(63,179,127,0.1);
 }
 
-/* BMI */
 .bmi-value {
   font-size: 42px;
   font-weight: 800;
@@ -226,6 +208,39 @@ body {
   background: transparent;
 }
 
+#age {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: transparent;
+}
+.gender-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+.gender-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--muted);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.gender-btn:hover {
+  background: rgba(63,179,127,0.1);
+}
+.gender-btn.selected {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(63,179,127,0.5);
+}
+
 .footer {
   padding: 20px;
   text-align: center;
@@ -234,6 +249,7 @@ body {
   margin-top: 40px;
 }
 
+/* Buat jadi Responsif (Penting) */
 @media(max-width:900px){
   .hero { flex-direction: column; text-align: center; }
   .hero-image img { max-width: 280px; }

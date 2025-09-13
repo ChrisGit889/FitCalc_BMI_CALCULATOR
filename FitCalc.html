@@ -1,21 +1,23 @@
+<!-- HTML Christhio Hermawan 535240050 -->
 <!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FitCalc — Kalkulator BMI</title>
+  <title>FitCalc — Kalkulator BMI Christhio Hermawan 535240050</title>
   <link rel="stylesheet" href="FitCalc.css" />
 </head>
 <body>
+
   <!-- Navbar -->
   <div class="nav-wrap">
     <nav class="navbar container">
       <a href="#home" class="brand">
-        <img src="https://img.icons8.com/fluency/96/dumbbell.png" alt="logo" class="logo-img">
+        <img src="gambar/FitCalc.png" alt="logo FitCalc" class="logo-img">
         <span class="brand-text">FitCalc</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home">Beranda</a></li>
         <li><a href="#calc-section">Kalkulator BMI</a></li>
         <li><a href="#info">Info</a></li>
       </ul>
@@ -24,14 +26,13 @@
   </div>
 
   <!-- Home -->
-<section id="home" class="section hero">
-  <div class="container hero-content">
-    <h1>Selamat datang di FitCalc</h1>
-    <p class="lead">FitCalc membantu kamu memahami Body Mass Index (BMI) dengan cepat.  
-    BMI adalah indikator sederhana untuk menilai apakah berat badanmu ideal.
-    kalo kamu merasa kurang sehat ya olah raga atuh</p>
-  </div>
-</section>
+  <section id="home" class="section hero">
+    <div class="container hero-content">
+      <h1>Selamat datang di FitCalc</h1>
+      <p class="lead">FitCalc membantu kamu memahami Body Mass Index (BMI) dengan cepat.  
+      BMI adalah indikator sederhana untuk menilai apakah berat badanmu ideal.</p>
+    </div>
+  </section>
 
   <!-- Kalkulator -->
   <section id="calc-section" class="section">
@@ -44,6 +45,15 @@
 
           <label for="height">Tinggi (cm)</label>
           <input id="height" type="number" min="50" step="0.1" placeholder="Contohnya 170">
+
+          <label for="age">Umur</label>
+          <input id="age" type="number" min="1" step="1" placeholder="Contohnya 20">
+
+          <label>Gender</label>
+          <div class="gender-group">
+            <button type="button" id="male" class="gender-btn">Pria</button>
+            <button type="button" id="female" class="gender-btn">Wanita</button>
+          </div>
 
           <div class="actions">
             <button id="calc" class="btn primary">Hitung BMI</button>
@@ -65,19 +75,19 @@
               </linearGradient>
             </defs>
             
-            <!-- garis lengkung -->
+            <!-- Buat panah berat badannya ( penting)-->
             <path d="M30 140 A120 120 0 0 1 270 140" fill="none" stroke="#eef6ee" stroke-width="18" stroke-linecap="round" /> 
             <path id="arc" d="M30 140 A120 120 0 0 1 270 140" fill="none" stroke="url(#g1)" stroke-width="18" stroke-linecap="round" stroke-dasharray="0 1000" />
             <g id="needle" transform="translate(150,140) rotate(-90)">
                 <line x1="0" y1="0" x2="0" y2="-88" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
                 <circle cx="0" cy="0" r="8" fill="currentColor" />
-              </g>
+            </g>
           </svg>
 
           <div class="legend">
-            <div class="chip">Underweight &lt; 18.5</div>
+            <div class="chip">Berat badan kurang &lt; 18.5</div>
             <div class="chip">Normal 18.5 - 24.9</div>
-            <div class="chip">Overweight 25 - 29.9</div>
+            <div class="chip">Berat badan Berlebihan 25 - 29.9</div>
             <div class="chip">Obesitas ≥ 30</div>
           </div>
         </div>
@@ -85,7 +95,6 @@
     </div>
   </section>
 
-  <!-- Info -->
   <section id="info" class="section">
     <div class="container narrow">
       <h2>Pentingnya Hidup Sehat</h2>
@@ -94,11 +103,18 @@
         Pola makan seimbang, olahraga teratur, dan istirahat cukup dapat mencegah berbagai penyakit kronis.  
         Gunakan FitCalc sebagai panduan awal, dan selalu konsultasikan dengan profesional kesehatan.
       </p>
+      
+      <h2>FitCalc</h2>
+      <p>
+        FitCalc adalah sebuah Kalkulator BMI yang digunakan untuk mengukur tingkat kesehatan berdasarkan berat dan tinggi badan.
+        Aplikasi ini dirancang untuk memberikan informasi yang mudah dipahami tentang status berat badan seseorang.
+        Dengan antarmuka yang sederhana dan intuitif, FitCalc memungkinkan pengguna untuk dengan cepat menghitung BMI mereka dan memahami kategorinya.
+      </p>
     </div>
   </section>
 
-  <footer class="footer">© 12 September 2025, Punya Christhio Hermawan 535240050</footer>
+  <footer class="footer">12 September 2025, Punya Christhio Hermawan 535240050</footer>
 
-  <script src="FitCalc.Js"></script>
+  <script src="FitCalc.js"></script>
 </body>
 </html>
